@@ -1,16 +1,18 @@
 /**
- * Created by rishabhshukla on 09/03/17.
+ * Created by dragon0513 on 09/03/21.
  */
 var firebase = require('firebase');
 const r = require('convert-radix64');
 const hasha = require("hasha");
+const dotenv = require('dotenv');
+dotenv.config();
 const hashMap = {};
 
 var config = {
-    apiKey: "AIzaSyBAAUCZ8xXzS4r7jxMhlvPB6OzKIC0MRE8",
-    authDomain: "urlshortner-b1883.firebaseapp.com",
-    databaseURL: "https://urlshortner-b1883.firebaseio.com",
-    storageBucket: "urlshortner-b1883.appspot.com",
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,
+    storageBucket: process.env.STORAGE_BUCKET,
 };
 firebase.initializeApp(config);
 
